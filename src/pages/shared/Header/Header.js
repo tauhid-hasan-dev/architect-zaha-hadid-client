@@ -61,10 +61,10 @@ const Header = () => {
                         {menuItem}
                     </ul>
                 </div>
-                <Link to="/" className="normal-case text-2xl  lg:text-4xl text-white font-semibold ">
+                <Link to="/" className="normal-case text-xl   lg:text-4xl text-white font-semibold ">
                     <div className='flex  items-center gap-2'>
                         <FaThLarge className='text-3xl lg:text-5xl'></FaThLarge>
-                        <span className='hidden lg:block ml-2 font-light'>Zaha <span className='font-bold'>Hadid</span> </span>
+                        <span className='block ml-2 font-light'>Zaha <span className='font-bold'>Hadid</span> </span>
                     </div>
                 </Link>
             </div>
