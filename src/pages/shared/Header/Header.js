@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { FaThLarge } from 'react-icons/fa';
 
 const Header = ({ user }) => {
 
@@ -46,10 +47,10 @@ const Header = ({ user }) => {
                         {menuItem}
                     </ul>
                 </div>
-                <Link to="/" className="normal-case text-2xl  lg:text-4xl text-green-500 font-bold ">
+                <Link to="/" className="normal-case text-2xl  lg:text-4xl text-white font-semibold ">
                     <div className='flex  items-center gap-2'>
-                        {/*     <FaGg className='text-4xl lg:text-6xl'></FaGg> */}
-                        <span className='hidden lg:block'>Zaha Hadid</span>
+                        <FaThLarge className='text-3xl lg:text-5xl'></FaThLarge>
+                        <span className='hidden lg:block ml-2'>Zaha Hadid</span>
                     </div>
                 </Link>
             </div>
