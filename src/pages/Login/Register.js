@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider';
 
 const Register = () => {
+    const { createUser, updateUser } = useContext(AuthContext);
+    const navigate = useNavigate()
+    const handleSignUp = (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name);
+
+        console.log(email, password)
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                toast.success('Registration successful!');
+                updateUserInfo(name);
+                navigate('/')
+                console.log(user);
+            })
+            .catch(err => {
+                console.error(err);
+                toast.error(err)
+            })
+    }
+
+
+    const updateUserInfo = (name) => {
+        const profile = {
+            displayName: name,
+        }
+        updateUser(profile)
+            .then(() => { })
+            .catch(e => console.log(e))
+    }
     return (
         <div className="hero bg-bg-login-color">
             <div className="hero-content flex-col  lg:flex-row">
@@ -10,7 +47,7 @@ const Register = () => {
                     <img src={image} alt="" />
                 </div> */}
                 <div className='px-5 lg:px-20  py-10  flex flex-col items-center text-slate-300 '>
-                    <form /* onSubmit={handleSignUp} */ className="p-7 lg:p-10  rounded-none border-slate-600 w-[350px]   lg:w-[450px] border " >
+                    <form onSubmit={handleSignUp} className="p-7 lg:p-10  rounded-none border-slate-600 w-[350px]   lg:w-[450px] border " >
                         <p className='text-center text-2xl  font-semibold'>Register</p>
                         <div className="form-control">
                             <label className="label">
