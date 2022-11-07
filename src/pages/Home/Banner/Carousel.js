@@ -31,8 +31,8 @@ const Carousel = ({ slide }) => {
                 </Link>
             </div>
             <div className=" absolute flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
-                <a href={`#slide${prev}`} className=" border p-3 text-white ">❮</a>
-                <a href={`#slide${next}`} className="border p-3 text-white ">❯</a>
+                <a href={`#slide${prev}`} className=" border hover:bg-slate-500 p-3 text-white ">❮</a>
+                <a href={`#slide${next}`} className="border hover:bg-slate-500 p-3 text-white ">❯</a>
             </div>
         </div>
     );

@@ -75,7 +75,7 @@ const Register = () => {
                         <div >
                             <input type="checkbox" id="terms" name="terms" value="terms" />
                             <label htmlFor="terms"> {<>
-                                Accept <Link to='/terms' className="underline text-slate-900">Terms and Conditions</Link>
+                                Accept <Link to='/terms' className="underline text-slate-300">Terms and Conditions</Link>
                             </>}</label>
                         </div>
                         <div className="form-control mt-6">

@@ -79,7 +79,7 @@ const Login = () => {
                                 </>}</label>
                             </div>
                             <div >
-                                <label htmlFor="my-modal-3" className="cursor-pointer underline text-slate-900 ">Reset Password</label>
+                                <label htmlFor="my-modal-3" className="cursor-pointer underline text-slate-300 ">Reset Password</label>
                             </div>
 
                         </div>
