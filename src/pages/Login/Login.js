@@ -6,23 +6,23 @@ const Login = () => {
     return (
         <div className="hero bg-bg-login-color">
             <div className="hero-content flex-col  lg:flex-row">
-                {/* <div className="text-center lg:text-left w-1/2">
-                    <img src={image} alt="" />
+                {/* <div className="text-center lg:text-left border w-1/2 text-white">
+                    <p>Login, Its secure</p>
                 </div> */}
                 <div className='px-5 lg:px-20  py-10  flex flex-col items-center text-slate-300'>
                     <form /* onSubmit={handleSignIn} */ className="p-7 lg:p-10 border  border-slate-600 w-[350px]   lg:w-[450px] " >
                         <p className='text-center text-slate-300 text-2xl  font-semibold'>Login </p>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-slate-900">Email</span>
+                                <span className="label-text text-slate-300">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered text-slate-100 font-semibold " required />
+                            <input type="email" name='email' placeholder="email" className="input input-bordered text-slate-900 font-semibold " required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-slate-900">Password</span>
+                                <span className="label-text text-slate-300">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered text-slate-100 font-semibold" required />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered text-slate-900 font-semibold" required />
                         </div>
                         <div className='text-red-600 bg-red-100 mb-3 mt-2 '>
                             {/* {error} */}
@@ -35,12 +35,12 @@ const Login = () => {
                                 </>}</label>
                             </div>
                             <div >
-                                <label htmlFor="my-modal-3" className="cursor-pointer underline text-slate-100 ">Reset Password</label>
+                                <label htmlFor="my-modal-3" className="cursor-pointer underline text-slate-900 ">Reset Password</label>
                             </div>
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn   ">Login</button>
+                            <button className="btn  btn-primary ">Login</button>
                         </div>
 
                         <div className='text-center'>

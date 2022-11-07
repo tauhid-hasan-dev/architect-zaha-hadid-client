@@ -16,20 +16,20 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text text-slate-300">Full Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="Your Full Name" className="input input-bordered text-slate-100 font-semibold " required />
+                            <input type="text" name='name' placeholder="Your Full Name" className="input input-bordered text-slate-900 font-semibold " required />
                         </div>
 
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-slate-300">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="Your Valid Email" className="input input-bordered text-slate-100 font-semibold " required />
+                            <input type="email" name='email' placeholder="Your Valid Email" className="input input-bordered text-slate-900 font-semibold " required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-slate-300">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="Password" className="input input-bordered text-slate-100 font-semibold " required />
+                            <input type="password" name='password' placeholder="Password" className="input input-bordered text-slate-900 font-semibold " required />
 
                         </div>
                         <div className='text-red-600 bg-red-100 mb-3 mt-2 '>
@@ -38,11 +38,11 @@ const Register = () => {
                         <div >
                             <input type="checkbox" id="terms" name="terms" value="terms" />
                             <label htmlFor="terms"> {<>
-                                Accept <Link to='/terms' className="underline text-slate-100">Terms and Conditions</Link>
+                                Accept <Link to='/terms' className="underline text-slate-900">Terms and Conditions</Link>
                             </>}</label>
                         </div>
                         <div className="form-control mt-6">
-                            <button type='submit' className="btn  border-btn-color  ">Register</button>
+                            <button type='submit' className="btn  border-btn-color btn-primary  ">Register</button>
                         </div>
                         <div className="text-center">
                             <small className="mr-2">Already have an account?</small>

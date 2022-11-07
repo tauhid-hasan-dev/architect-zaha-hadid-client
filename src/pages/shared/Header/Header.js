@@ -32,7 +32,7 @@ const Header = ({ user }) => {
 
         {/* <Link className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-sm btn-error">LogOut</button></Link> */}
 
-        <Link to='/login' className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-sm ">LogIn</button></Link>
+        <Link to='/login' className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-none btn-primary">LogIn</button></Link>
 
         {/* <Link to='/login' className='pl-20 lg:pl-5'><button className="rounded-none  border px-2  border-white   text-white py-1">Login</button></Link> */}
 
