@@ -19,39 +19,39 @@ const Header = () => {
         <NavLink
             to="/"
             className={({ isActive }) =>
-                isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
+                isActive ? ' border-b border-logo-color' : undefined
             }
         >Home</NavLink>
 
         <NavLink to='/services' className={({ isActive }) =>
-            isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
+            isActive ? ' border-b border-logo-color' : undefined
         } >Services</NavLink>
 
         <NavLink to='/blog' className={({ isActive }) =>
-            isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
+            isActive ? ' border-b border-logo-color' : undefined
         }>Blog</NavLink>
 
         {
             user?.email ?
                 <>
                     <NavLink to='/addservice' className={({ isActive }) =>
-                        isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
+                        isActive ? ' border-b border-logo-color' : undefined
                     }>Add Service</NavLink>
 
                     <NavLink to='/myreview' className={({ isActive }) =>
-                        isActive ? 'text-blue-500 border-b-2 border-logo-color ' : undefined
+                        isActive ? ' border-b border-logo-color ' : undefined
                     }>My Reviews</NavLink>
 
                     <Link onClick={handleLogOut} className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-none btn-primary">LogOut</button></Link>
 
                 </>
                 :
-                <Link to='/login' className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-none btn-primary">LogIn</button></Link>
+                <Link to='/login' className='pl-2 lg:pl-4 '><button className="hover:bg-slate-300 hover:text-black border px-2    rounded-none ">LogIn</button></Link>
         }
 
     </>
     return (
-        <div className={`navbar bg-nav-color shadow-md px-5 border-b border-slate-900 lg:px-28 py-5 $`}>
+        <div className={`navbar bg-nav-color shadow-md px-5 border-b border-slate-300 lg:px-28 py-5 $`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden text-white text-6xl">

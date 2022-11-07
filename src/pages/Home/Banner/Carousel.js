@@ -27,12 +27,12 @@ const Carousel = ({ slide }) => {
             </div>
             <div className="absolute  flex justify-start gap-5 left-28 w-2/5 transform -translate-y-1/2  right-5 top-[55%]">
                 <Link to='/services'>
-                    <button className="btn btn-primary hidden lg:block">My Services</button>
+                    <button className="border p-3 text-white hidden lg:block">My Services</button>
                 </Link>
             </div>
             <div className=" absolute flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
-                <a href={`#slide${prev}`} className="btn btn-circle btn-warning">❮</a>
-                <a href={`#slide${next}`} className="btn btn-circle btn-warning">❯</a>
+                <a href={`#slide${prev}`} className=" border p-3 text-white ">❮</a>
+                <a href={`#slide${next}`} className="border p-3 text-white ">❯</a>
             </div>
         </div>
     );
