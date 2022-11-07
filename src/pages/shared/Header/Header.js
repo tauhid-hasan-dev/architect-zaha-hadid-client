@@ -8,31 +8,31 @@ const Header = ({ user }) => {
         <NavLink
             to="/"
             className={({ isActive }) =>
-                isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
+                isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
             }
         >Home</NavLink>
 
         <NavLink to='/services' className={({ isActive }) =>
-            isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
+            isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
         } >Services</NavLink>
 
         <NavLink to='/blog' className={({ isActive }) =>
-            isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
+            isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
         }>Blog</NavLink>
 
 
 
         <NavLink to='/addservice' className={({ isActive }) =>
-            isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
+            isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
         }>Add Service</NavLink>
 
         <NavLink to='/myreview' className={({ isActive }) =>
-            isActive ? 'text-green-500 border-b-2 border-logo-color ' : undefined
+            isActive ? 'text-blue-500 border-b-2 border-logo-color ' : undefined
         }>My Reviews</NavLink>
 
         {/* <Link className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-sm btn-error">LogOut</button></Link> */}
 
-        <Link to='/login' className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-sm btn-success">LogIn</button></Link>
+        <Link to='/login' className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-sm ">LogIn</button></Link>
 
         {/* <Link to='/login' className='pl-20 lg:pl-5'><button className="rounded-none  border px-2  border-white   text-white py-1">Login</button></Link> */}
 
