@@ -6,7 +6,6 @@ import Review from './Review';
 const Services = () => {
     return (
         <div>
-            <p>this is services page</p>
             <IntroService></IntroService>
             <AllServices></AllServices>
             <Review></Review>

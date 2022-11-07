@@ -26,7 +26,7 @@ const Header = ({ user }) => {
             isActive ? 'text-green-500 border-b-2 border-logo-color' : undefined
         }>Add Service</NavLink>
 
-        <NavLink to='/myreviews' className={({ isActive }) =>
+        <NavLink to='/myreview' className={({ isActive }) =>
             isActive ? 'text-green-500 border-b-2 border-logo-color ' : undefined
         }>My Reviews</NavLink>
 
