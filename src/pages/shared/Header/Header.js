@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaThLarge } from 'react-icons/fa';
+import { AuthContext } from '../../../contexts/AuthProvider';
 
-const Header = ({ user }) => {
+const Header = () => {
+    const { user, logout } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logout()
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(err => console.error(err))
+    }
+
 
     const menuItem = <>
         <NavLink
@@ -20,22 +31,23 @@ const Header = ({ user }) => {
             isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
         }>Blog</NavLink>
 
+        {
+            user?.email ?
+                <>
+                    <NavLink to='/addservice' className={({ isActive }) =>
+                        isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
+                    }>Add Service</NavLink>
 
+                    <NavLink to='/myreview' className={({ isActive }) =>
+                        isActive ? 'text-blue-500 border-b-2 border-logo-color ' : undefined
+                    }>My Reviews</NavLink>
 
-        <NavLink to='/addservice' className={({ isActive }) =>
-            isActive ? 'text-blue-500 border-b-2 border-logo-color' : undefined
-        }>Add Service</NavLink>
+                    <Link onClick={handleLogOut} className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-none btn-primary">LogOut</button></Link>
 
-        <NavLink to='/myreview' className={({ isActive }) =>
-            isActive ? 'text-blue-500 border-b-2 border-logo-color ' : undefined
-        }>My Reviews</NavLink>
-
-        {/* <Link className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-sm btn-error">LogOut</button></Link> */}
-
-        <Link to='/login' className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-none btn-primary">LogIn</button></Link>
-
-        {/* <Link to='/login' className='pl-20 lg:pl-5'><button className="rounded-none  border px-2  border-white   text-white py-1">Login</button></Link> */}
-
+                </>
+                :
+                <Link to='/login' className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-none btn-primary">LogIn</button></Link>
+        }
 
     </>
     return (
