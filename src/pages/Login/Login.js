@@ -60,13 +60,13 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text text-slate-300">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered text-slate-900 font-semibold " required />
+                            <input type="email" name='email' placeholder="email" className="input input-bordered text-slate-900 font-semibold rounded-none" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-slate-300">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered text-slate-900 font-semibold" required />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered rounded-none text-slate-900 font-semibold" required />
                         </div>
                         <div className='text-red-600 bg-red-100 mb-3 mt-2 '>
                             {/* {error} */}
@@ -84,7 +84,7 @@ const Login = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn  btn-primary ">Login</button>
+                            <button className="border p-3 text-white hidden lg:block hover:bg-slate-600 ">Login</button>
                         </div>
 
                         <div className='text-center'>

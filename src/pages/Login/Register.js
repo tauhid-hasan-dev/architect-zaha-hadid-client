@@ -53,14 +53,14 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text text-slate-300">Full Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="Your Full Name" className="input input-bordered text-slate-900 font-semibold " required />
+                            <input type="text" name='name' placeholder="Your Full Name" className="input input-bordered text-slate-900 font-semibold rounded-none" required />
                         </div>
 
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-slate-300">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="Your Valid Email" className="input input-bordered text-slate-900 font-semibold " required />
+                            <input type="email" name='email' placeholder="Your Valid Email" className="input input-bordered text-slate-900 font-semibold rounded-none" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -79,7 +79,7 @@ const Register = () => {
                             </>}</label>
                         </div>
                         <div className="form-control mt-6">
-                            <button type='submit' className="btn  border-btn-color btn-primary  ">Register</button>
+                            <button type='submit' className="border p-3 text-white hidden lg:block hover:bg-slate-600  ">Register</button>
                         </div>
                         <div className="text-center">
                             <small className="mr-2">Already have an account?</small>

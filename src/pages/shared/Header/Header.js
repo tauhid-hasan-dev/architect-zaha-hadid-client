@@ -46,12 +46,12 @@ const Header = () => {
 
                 </>
                 :
-                <Link to='/login' className='pl-2 lg:pl-4 '><button className="hover:bg-slate-300 hover:text-black border px-2    rounded-none ">LogIn</button></Link>
+                <Link to='/login' className='pl-2 lg:pl-4 '><button className="hover:bg-slate-600 border px-2    rounded-none ">LogIn</button></Link>
         }
 
     </>
     return (
-        <div className={`navbar bg-nav-color shadow-md px-5 border-b border-slate-300 lg:px-28 py-5 $`}>
+        <div className={`navbar bg-nav-color shadow-md px-5 border-b border-slate-500 lg:px-28 py-5 `}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden text-white text-6xl">
@@ -64,7 +64,7 @@ const Header = () => {
                 <Link to="/" className="normal-case text-xl   lg:text-4xl text-white font-semibold ">
                     <div className='flex  items-center gap-2'>
                         <FaThLarge className='text-3xl lg:text-5xl'></FaThLarge>
-                        <span className='block ml-2 font-light'>Zaha <span className='font-bold'>Hadid</span> </span>
+                        <span className='block ml-2 font-light'>Zaha <span className='font-semibold'>Hadid</span> </span>
                     </div>
                 </Link>
             </div>

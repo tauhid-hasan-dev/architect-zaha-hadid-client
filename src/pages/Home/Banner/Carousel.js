@@ -27,7 +27,7 @@ const Carousel = ({ slide }) => {
             </div>
             <div className="absolute  flex justify-start gap-5 left-28 w-2/5 transform -translate-y-1/2  right-5 top-[55%]">
                 <Link to='/services'>
-                    <button className="border p-3 text-white hidden lg:block">My Services</button>
+                    <button className="border p-3 text-white hidden lg:block hover:bg-slate-600">My Services</button>
                 </Link>
             </div>
             <div className=" absolute flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
