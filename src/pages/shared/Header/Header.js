@@ -32,7 +32,9 @@ const Header = ({ user }) => {
 
         {/* <Link className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-sm btn-error">LogOut</button></Link> */}
 
-        <Link to='/login' className='pl-20 lg:pl-5 '><button className="rounded-none btn  btn-sm lg:btn-sm btn-success btn-outline">Login</button></Link>
+        <Link className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-sm btn-success">LogIn</button></Link>
+
+        {/* <Link to='/login' className='pl-20 lg:pl-5'><button className="rounded-none  border px-2  border-white   text-white py-1">Login</button></Link> */}
 
 
     </>
@@ -50,7 +52,7 @@ const Header = ({ user }) => {
                 <Link to="/" className="normal-case text-2xl  lg:text-4xl text-white font-semibold ">
                     <div className='flex  items-center gap-2'>
                         <FaThLarge className='text-3xl lg:text-5xl'></FaThLarge>
-                        <span className='hidden lg:block ml-2'>Zaha Hadid</span>
+                        <span className='hidden lg:block ml-2 font-light'>Zaha <span className='font-bold'>Hadid</span> </span>
                     </div>
                 </Link>
             </div>
