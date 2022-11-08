@@ -61,9 +61,9 @@ const ServiceDetails = () => {
 
             {
                 user?.email ?
-                    <div className='w-full flex justify-center mt-20'>
+                    <div className='w-full flex justify-center '>
                         <div className='pb-10 lg:w-1/2 w-[90%]'>
-                            <p className='text-2xl  text-slate-300 font-bold text-center mb-5'>Please add your review for <span className='text-white text-3xl'>{title}</span> service</p>
+                            <p className='text-xl  text-slate-300 font-bold text-center mb-5'>Please add your review for <span className='text-white font-bold text-xl'>{title}</span> service</p>
                             <form onSubmit={handleReview} className='p-10  bg-nav-color flex flex-col gap-5'>
 
                                 <textarea name='review' className="bg-slate-500 text-white  focus:bg-slate-700 textarea rounded-none w-full" placeholder="Write your review here" required></textarea>
