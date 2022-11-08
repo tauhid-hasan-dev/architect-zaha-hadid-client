@@ -18,7 +18,7 @@ const ServiceHome = () => {
     }, [])
 
     return (
-        <div className='bg-nav-color px-28  py-20'>
+        <div className='bg-nav-color px-5 lg:px-28 py-8 lg:py-16'>
             <div className='flex justify-center pb-20'>
                 <p className='text-4xl text-white'>My Services</p>
             </div>
@@ -28,7 +28,7 @@ const ServiceHome = () => {
                 }
 
             </div>
-            <div className='flex justify-center  my-10'>
+            <div className='flex justify-center pt-14'>
                 <Link to='/services'>
                     <button className=" border py-3  px-10 text-white hidden lg:block hover:bg-slate-600">See All</button>
                 </Link>
