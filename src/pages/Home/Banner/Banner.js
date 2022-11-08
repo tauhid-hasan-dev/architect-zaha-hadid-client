@@ -1,7 +1,5 @@
-import React from 'react';
-import img1 from '../../../images/banner/1.jpg'
-import img2 from '../../../images/banner/2.jpg'
-import img3 from '../../../images/banner/3.jpg'
+import React, { useEffect, useState } from 'react';
+
 
 import Carousel from './Carousel';
 
@@ -39,11 +37,29 @@ const bannerData = [
 
 ]
 
+
+
+
 const Banner = () => {
+    const [sliders, setSliders] = useState([]);
+
+    console.log(sliders);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/sliders', {
+            method: 'GET'
+        })
+            .then(res => res.json())
+            .then(data => {
+                setSliders(data)
+            })
+    }, [])
+
+
     return (
         <div className="carousel w-full ">
             {
-                bannerData.map(slide => <Carousel key={slide.id} slide={slide}></Carousel>)
+                sliders.map(slide => <Carousel key={slide.id} slide={slide}></Carousel>)
             }
         </div>
     );
