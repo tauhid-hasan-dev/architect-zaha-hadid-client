@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 
@@ -23,8 +24,22 @@ const ServiceDetails = () => {
             reviewMessage,
         }
 
-
-
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(review)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    toast.success('Your review added');
+                    form.reset()
+                }
+            })
+            .catch(err => console.error(err))
     }
 
     console.log(service);
