@@ -15,7 +15,7 @@ const ReviewCard = ({ review }) => {
             </div>
 
             <div className='bg-nav-color py-3 px-2 text-lg font-thin'>
-                <p>{reviewMessage}</p>
+                <p> "{reviewMessage}"  </p>
             </div>
 
         </div>
