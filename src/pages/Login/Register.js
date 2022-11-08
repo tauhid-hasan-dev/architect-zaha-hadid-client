@@ -13,6 +13,7 @@ const Register = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
+        const photoURL = form.photoURL.value;
         const password = form.password.value;
         console.log(name);
 
@@ -21,7 +22,7 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 toast.success('Registration successful!');
-                updateUserInfo(name);
+                updateUserInfo(name, photoURL);
                 navigate('/')
                 console.log(user);
             })
@@ -32,9 +33,10 @@ const Register = () => {
     }
 
 
-    const updateUserInfo = (name) => {
+    const updateUserInfo = (name, photoURL) => {
         const profile = {
             displayName: name,
+            photoURL: photoURL,
         }
         updateUser(profile)
             .then(() => { })
@@ -61,6 +63,12 @@ const Register = () => {
                                 <span className="label-text text-slate-300">Email</span>
                             </label>
                             <input type="email" name='email' placeholder="Your Valid Email" className="input input-bordered text-slate-900 font-semibold rounded-none" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-slate-300">Your Photo URL</span>
+                            </label>
+                            <input type="text" name='photoURL' placeholder="Your Photo Url" className="input input-bordered text-slate-900 font-semibold rounded-none" required />
                         </div>
                         <div className="form-control">
                             <label className="label">

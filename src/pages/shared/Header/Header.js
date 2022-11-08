@@ -41,6 +41,10 @@ const Header = () => {
                     <NavLink to='/myreview' className={({ isActive }) =>
                         isActive ? ' border-b border-logo-color ' : undefined
                     }>My Reviews</NavLink>
+                    {/*  <div>
+                        <img className='border-2 border-green-600 ml-1 lg:ml-8 w-8 h-8 lg:w-14 lg:h-14 rounded-full' src={user?.photoURL} alt="" />
+                    </div>
+                    <p>{user?.displayName}</p> */}
 
                     <Link onClick={handleLogOut} className='pl-2 lg:pl-5'><button className="btn  btn-sm lg:btn-sm rounded-none btn-primary">LogOut</button></Link>
 
