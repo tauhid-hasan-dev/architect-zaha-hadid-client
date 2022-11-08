@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import Review from './Review';
 
 const ServiceDetails = () => {
     const service = useLoaderData();
@@ -56,18 +57,15 @@ const ServiceDetails = () => {
             <div className='border-b border-slate-600'>
             </div>
 
+            <Review serviceId={_id}></Review>
+
             {
                 user?.email ?
                     <div className='w-full flex justify-center mt-20'>
                         <div className='pb-10 lg:w-1/2 w-[90%]'>
                             <p className='text-2xl  text-slate-300 font-bold text-center mb-5'>Please add your review for <span className='text-white text-3xl'>{title}</span> service</p>
                             <form onSubmit={handleReview} className='p-10  bg-nav-color flex flex-col gap-5'>
-                                {/* <div className='grid grid-cols-1 gap-5  '>
-                                    <input type="text" name='name' placeholder="Your Full Name" className="input input-bordered rounded-none bg-slate-500  focus:bg-slate-700 w-full  text-slate-50" required />
-                                    <input type="text" name='email' placeholder="Your Email" className="input input-bordered rounded-none bg-slate-500  focus:bg-slate-700 w-full  text-slate-50" defaultValue={user?.email} readOnly />
 
-                                    <input type="text" name='image' placeholder="Your Image URL" className="input input-bordered rounded-none bg-slate-500  focus:bg-slate-700 w-full  text-slate-50" required />
-                                </div> */}
                                 <textarea name='review' className="bg-slate-500 text-white  focus:bg-slate-700 textarea rounded-none w-full" placeholder="Write your review here" required></textarea>
                                 <button type='submit' className=" border border-slate-500 w-full py-3 px-10 text-white hidden lg:block hover:bg-slate-800">Add Review</button>
                             </form>

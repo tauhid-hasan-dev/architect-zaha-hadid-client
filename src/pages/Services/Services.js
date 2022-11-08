@@ -1,7 +1,7 @@
 import React from 'react';
 import AllServices from './AllServices';
 import IntroService from './IntroService';
-import Review from './Review';
+
 
 const Services = () => {
     
@@ -9,7 +9,6 @@ const Services = () => {
         <div>
             <IntroService></IntroService>
             <AllServices></AllServices>
-            <Review></Review>
         </div>
     );
 };
