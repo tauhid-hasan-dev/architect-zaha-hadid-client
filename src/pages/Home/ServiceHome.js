@@ -8,7 +8,7 @@ const ServiceHome = () => {
     console.log(services);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services', {
+        fetch('https://architect-tauhid-hasan-server.vercel.app/services', {
             method: 'GET'
         })
             .then(res => res.json())

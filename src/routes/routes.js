@@ -50,13 +50,13 @@ export const router = createBrowserRouter([
                 path: '/servicedetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
                 errorElement: <ErrorElement></ErrorElement>,
-                loader: ({ params }) => fetch(`http://localhost:5000/servicedetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://architect-tauhid-hasan-server.vercel.app/servicedetails/${params.id}`)
             },
             {
                 path: '/editreview/:id',
                 element: <EditReview></EditReview>,
                 errorElement: <ErrorElement></ErrorElement>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://architect-tauhid-hasan-server.vercel.app/reviews/${params.id}`)
             },
 
 

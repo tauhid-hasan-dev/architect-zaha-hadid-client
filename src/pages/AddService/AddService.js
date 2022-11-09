@@ -20,7 +20,7 @@ const AddService = () => {
             description: serviceDetails
         }
 
-        fetch('http://localhost:5000/allservices', {
+        fetch('https://architect-tauhid-hasan-server.vercel.app/allservices', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

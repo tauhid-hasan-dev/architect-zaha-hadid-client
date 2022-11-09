@@ -8,7 +8,7 @@ const MyReview = () => {
     /* console.log(myreviews) */
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`https://architect-tauhid-hasan-server.vercel.app/reviews?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyReviews(data))
     })

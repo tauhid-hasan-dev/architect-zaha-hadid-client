@@ -7,7 +7,7 @@ const AllServices = () => {
     console.log(services);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allservices', {
+        fetch('https://architect-tauhid-hasan-server.vercel.app/allservices', {
             method: 'GET'
         })
             .then(res => res.json())

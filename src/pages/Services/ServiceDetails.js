@@ -28,7 +28,7 @@ const ServiceDetails = () => {
             reviewMessage,
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://architect-tauhid-hasan-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

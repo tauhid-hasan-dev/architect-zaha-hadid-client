@@ -10,7 +10,7 @@ const EditReview = () => {
     const handleEditReview = (event) => {
         event.preventDefault();
         console.log(review);
-        fetch(`http://localhost:5000/reviews/${review._id}`, {
+        fetch(`https://architect-tauhid-hasan-server.vercel.app/reviews/${review._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

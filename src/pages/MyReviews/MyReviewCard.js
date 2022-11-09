@@ -7,7 +7,7 @@ const MyReviewCard = ({ myreview }) => {
     const { reviewMessage, serviceName, serviceImage, _id, dateField } = myreview;
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://architect-tauhid-hasan-server.vercel.app/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -46,7 +46,7 @@ const Banner = () => {
     console.log(sliders);
 
     useEffect(() => {
-        fetch('http://localhost:5000/sliders', {
+        fetch('https://architect-tauhid-hasan-server.vercel.app/sliders', {
             method: 'GET'
         })
             .then(res => res.json())
