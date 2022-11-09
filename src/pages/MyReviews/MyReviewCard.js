@@ -1,6 +1,7 @@
 import React from 'react';
 import toast from 'react-hot-toast';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const MyReviewCard = ({ myreview }) => {
     const { reviewMessage, serviceName, serviceImage, _id, dateField } = myreview;
@@ -35,13 +36,11 @@ const MyReviewCard = ({ myreview }) => {
                 </div>
                 <div className='text-white text-2xl flex gap-3 '>
                     <div className='hover:text-green-300 cursor-pointer'>
-                        <FaEdit ></FaEdit>
+                        <Link to={`/editreview/${_id}`}> <FaEdit  ></FaEdit></Link>
                     </div>
                     <div className='hover:text-red-300 cursor-pointer'>
                         <FaTrashAlt onClick={() => handleDelete(_id)}></FaTrashAlt>
                     </div>
-
-
                 </div>
             </div>
 

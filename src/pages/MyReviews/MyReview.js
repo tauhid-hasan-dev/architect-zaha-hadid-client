@@ -22,11 +22,10 @@ const MyReview = () => {
                         }
                     </div>
 
-                    : <div className='flex justify-center p-56'>
+                    : <div className='flex justify-center p-10  lg:p-56'>
                         <p className='text-white text-5xl'>No reviews were added </p>
                     </div>
             }
-
         </div>
     );
 };
