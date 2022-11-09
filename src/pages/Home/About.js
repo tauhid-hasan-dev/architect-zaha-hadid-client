@@ -10,7 +10,7 @@ const About = () => {
                 </div>
                 <div className='w-full lg:w-1/2 p-5'>
                     <p className='font-bold text-lg lg:text-lg text-slate-50'>About Me</p>
-                    <h1 className="text-2xl lg:text-4xl font-bold">I am the first woman <br /> to be awarded <br /> the Pritzker Architecture Prize.  <br />
+                    <h1 className="text-2xl lg:text-3xl font-bold">I am the first woman Architect <br /> to be awarded <br /> the Pritzker Architecture Prize.  <br />
                     </h1>
                     <p className="py-6 font-light">My pioneering vision redefined architecture for the 21st century and captured imaginations across the globe. Each of mine projects transformed notions of what can be achieved in concrete, steel, and glass; combining her unwavering optimism for the future and belief in the power of invention with advanced design, material and construction innovations. </p>
 

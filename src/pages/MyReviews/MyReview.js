@@ -13,10 +13,10 @@ const MyReview = () => {
             .then(data => setMyReviews(data))
     })
     return (
-        <div >
+        <div className='bg-bg-login-color'>
             {
                 myreviews.length > 0 ?
-                    <div className='px-5 lg:px-28 bg-bg-login-color flex flex-col gap-10 p-10'>
+                    <div className='px-5 lg:px-28 bg-bg-login-color flex flex-col gap-10 pt-20 pb-64'>
                         {
                             myreviews.map(myreview => <MyReviewCard key={myreview._id} myreview={myreview}></MyReviewCard>)
                         }
