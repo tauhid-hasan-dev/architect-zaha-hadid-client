@@ -13,10 +13,13 @@ const ServiceDetails = () => {
         event.preventDefault();
         const form = event.target;
         const reviewMessage = form.review.value;
+        let today = new Date()
+        console.log(today);
         //console.log(name, email, photoURL, reviewMessage)
 
         const review = {
             serviceId: _id,
+            dateField: today,
             serviceName: title,
             serviceImage: img,
             name: user?.displayName,

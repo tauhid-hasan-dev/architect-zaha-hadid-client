@@ -1,14 +1,10 @@
-import React from 'react';
-import AllServices from './AllServices';
-import IntroService from './IntroService';
 
+import AllServices from './AllServices';
 
 const Services = () => {
-    
     return (
         <div>
-            <IntroService></IntroService>
-            <AllServices></AllServices>
+            <AllServices ></AllServices>
         </div>
     );
 };
