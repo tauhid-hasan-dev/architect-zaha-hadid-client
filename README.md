@@ -1,4 +1,4 @@
-# edu-Cate (A ed-tech single page web app)
+# Zaha Hadid (A service based website for Zaha Hadid)
 
 ### Live website : https://learning-platform-client-d552c.web.app/
 ### server: https://b610-lerning-platform-server-side.vercel.app/
