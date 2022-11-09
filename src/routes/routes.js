@@ -7,6 +7,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Login/Register";
 import EditReview from "../pages/MyReviews/EditReview";
 import MyReview from "../pages/MyReviews/MyReview";
+import ErrorElement from "../pages/Other/ErrorElement";
+import NotFound from "../pages/Other/NotFound";
 import ServiceDetails from "../pages/Services/ServiceDetails";
 import Services from "../pages/Services/Services";
 import PrivateRoute from "./PrivateRoute";
@@ -47,15 +49,19 @@ export const router = createBrowserRouter([
             {
                 path: '/servicedetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
+                errorElement: <ErrorElement></ErrorElement>,
                 loader: ({ params }) => fetch(`http://localhost:5000/servicedetails/${params.id}`)
             },
             {
                 path: '/editreview/:id',
                 element: <EditReview></EditReview>,
+                errorElement: <ErrorElement></ErrorElement>,
                 loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
             },
 
 
         ]
-    }
+    },
+    { path: '*', element: <NotFound></NotFound> }
+
 ])
