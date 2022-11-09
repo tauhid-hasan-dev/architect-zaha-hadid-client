@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import ReviewCard from './ReviewCard';
 
 const Review = ({ serviceId }) => {
+    console.log(serviceId)
     const [serviceReviews, setServiceReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`https://architect-tauhid-hasan-server.vercel.app/reviews?serviceId=${serviceId}`)
+        fetch(`http://localhost:5000/reviewsbyid?serviceId=${serviceId}`)
             .then(res => res.json())
             .then(data => setServiceReviews(data))
     })
