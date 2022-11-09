@@ -5,7 +5,7 @@ import MyReviewCard from './MyReviewCard';
 const MyReview = () => {
     const [myreviews, setMyReviews] = useState([]);
     const { user } = useContext(AuthContext)
-    console.log(myreviews)
+    /* console.log(myreviews) */
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?email=${user?.email}`)
