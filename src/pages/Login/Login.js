@@ -25,8 +25,26 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate(from, { replace: true });
-                toast.success('Successfully Logged In')
+
+                const currentUser = {
+                    email: user.email
+                }
+
+                fetch(`https://architect-tauhid-hasan-server.vercel.app/jwt`, {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('zaha-hadid-token', data.token);
+                        navigate(from, { replace: true });
+                    })
+
+
             })
             .catch(err => {
                 console.error(err);

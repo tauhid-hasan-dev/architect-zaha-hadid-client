@@ -4,13 +4,25 @@ import MyReviewCard from './MyReviewCard';
 
 const MyReview = () => {
     const [myreviews, setMyReviews] = useState([]);
-    const { user } = useContext(AuthContext)
+    const { user, logout } = useContext(AuthContext)
     /* console.log(myreviews) */
 
     useEffect(() => {
-        fetch(`https://architect-tauhid-hasan-server.vercel.app/reviews?email=${user?.email}`)
-            .then(res => res.json())
-            .then(data => setMyReviews(data))
+        fetch(`https://architect-tauhid-hasan-server.vercel.app/reviews?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('zaha-hadid-token')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logout()
+                }
+                return res.json()
+            })
+            .then(data => {
+                console.log(data);
+                setMyReviews(data)
+            })
     })
     return (
         <div className='bg-bg-login-color'>
