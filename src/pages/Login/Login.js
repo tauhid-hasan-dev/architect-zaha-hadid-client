@@ -4,11 +4,13 @@ import toast from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
     let location = useLocation();
     const navigate = useNavigate();
+    useTitle('Login')
 
     let from = location.state?.from?.pathname || "/";
 

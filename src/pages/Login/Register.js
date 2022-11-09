@@ -3,10 +3,12 @@ import toast from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
     const { createUser, updateUser } = useContext(AuthContext);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    useTitle('Register')
     const handleSignUp = (event) => {
         event.preventDefault();
 
