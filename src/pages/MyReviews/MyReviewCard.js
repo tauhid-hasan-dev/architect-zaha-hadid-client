@@ -15,11 +15,11 @@ const MyReviewCard = ({ myreview }) => {
                         <p>{serviceName}</p>
                     </div>
                 </div>
-                <div className='text-white text-2xl flex gap-3'>
-                    <div className='hover:text-green-300'>
+                <div className='text-white text-2xl flex gap-3 '>
+                    <div className='hover:text-green-300 cursor-pointer'>
                         <FaEdit></FaEdit>
                     </div>
-                    <div className='hover:text-red-300'>
+                    <div className='hover:text-red-300 cursor-pointer'>
                         <FaTrashAlt></FaTrashAlt>
                     </div>
 
