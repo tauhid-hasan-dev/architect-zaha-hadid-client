@@ -6,7 +6,7 @@ const About = () => {
             <div className="hero-content flex-col p-0 lg:flex-row">
                 <div className='w-full lg:w-1/2'>
                     <img src='https://i.ibb.co/P90mQSh/zh.jpg' className="w-[100%] lg:w-4/5 h-full  " alt='' />
-                    {/* <img src={parts} className="absolute border-8 border-white w-3/5 right-5 top-1/2 rounded-lg " alt='' /> */}
+
                 </div>
                 <div className='w-full lg:w-1/2 p-5'>
                     <p className='font-bold text-lg lg:text-lg text-slate-50'>About Me</p>
