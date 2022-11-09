@@ -13,7 +13,7 @@ const ServiceDetails = () => {
         event.preventDefault();
         const form = event.target;
         const reviewMessage = form.review.value;
-        let today = new Date()
+        let today = new Date().toLocaleString();
         console.log(today);
         //console.log(name, email, photoURL, reviewMessage)
 
@@ -60,7 +60,7 @@ const ServiceDetails = () => {
             <div className='border-b border-slate-600'>
             </div>
 
-            <Review serviceId={_id}></Review>
+
 
             {
                 user?.email ?
@@ -82,6 +82,8 @@ const ServiceDetails = () => {
                         </Link>
                     </div>
             }
+
+            <Review serviceId={_id}></Review>
 
         </div >
     );
