@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServiceCard = ({ service }) => {
     const { title, img, price, description, _id } = service;
     return (
         <div className="items-stretch cursor-pointer card rounded-none card-compact bg-bg-login-color  border-green-500  shadow-green-500">
-            <figure><img src={img} alt="Shoes" /></figure>
-
+            <PhotoProvider>
+                <PhotoView src={img}>
+                    <img src={img} alt="thumbnail" />
+                </PhotoView>
+            </PhotoProvider>
             <div className="card-body items-center text-center ">
                 <h2 className="card-title text-white text-2xl">{title}</h2>
                 <p className='text-slate-500 p-3'>Service fee starts from: <br /> <span className='text-slate-300 text-xl font-bold'>${price}K</span></p>
