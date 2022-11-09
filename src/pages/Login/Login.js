@@ -52,7 +52,6 @@ const Login = () => {
     return (
         <div className="hero bg-bg-login-color">
             <div className="hero-content flex-col  lg:flex-row">
-
                 <div className='px-5 lg:px-20  py-10  flex flex-col items-center text-slate-300'>
                     <form onSubmit={handleSignIn} className="p-7 lg:p-10 border  border-slate-600 w-[350px]   lg:w-[450px] " >
                         <p className='text-center text-slate-300 text-2xl  font-semibold'>Login </p>

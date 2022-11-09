@@ -9,6 +9,7 @@ import EditReview from "../pages/MyReviews/EditReview";
 import MyReview from "../pages/MyReviews/MyReview";
 import ServiceDetails from "../pages/Services/ServiceDetails";
 import Services from "../pages/Services/Services";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/myreview',
-                element: <MyReview></MyReview>
+                element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
             },
             {
                 path: '/services',
@@ -32,8 +33,8 @@ export const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: 'addservice',
-                element: <AddService></AddService>
+                path: '/addservice',
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
                 path: '/login',
@@ -52,7 +53,8 @@ export const router = createBrowserRouter([
                 path: '/editreview/:id',
                 element: <EditReview></EditReview>,
                 loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
-            }
+            },
+
 
         ]
     }
