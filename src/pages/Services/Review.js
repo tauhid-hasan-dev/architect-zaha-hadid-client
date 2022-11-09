@@ -11,9 +11,9 @@ const Review = ({ serviceId }) => {
     })
 
     return (
-        <div className='py-12 '>
+        <div className=' '>
             <div className='flex justify-center mb-8'>
-                <p className='text-slate-300 text-3xl'>Customer Review</p>
+                <p className='text-slate-300 text-3xl'>Customer Reviews</p>
             </div>
             <div className='text-white flex flex-col gap-10'>
                 {

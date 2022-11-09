@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import ServiceCard from '../shared/ServiceCard/ServiceCard';
-
 
 
 const AllServices = () => {
     const [services, setServices] = useState([]);
-
     console.log(services);
 
     useEffect(() => {
@@ -18,6 +15,7 @@ const AllServices = () => {
                 setServices(data)
             })
     }, [])
+
     return (
         <div className='bg-nav-color px-5 lg:px-28 py-8 lg:py-16'>
             <div className='flex justify-center pb-20'>

@@ -61,11 +61,10 @@ const ServiceDetails = () => {
             </div>
 
 
-
             {
                 user?.email ?
                     <div className='w-full flex justify-center '>
-                        <div className='pb-10 lg:w-1/2 w-[90%]'>
+                        <div className='p-10 lg:w-1/2 w-[90%] '>
                             <p className='text-xl  text-slate-300 font-bold text-center mb-5'>Please add your review for <span className='text-white font-bold text-xl'>{title}</span> service</p>
                             <form onSubmit={handleReview} className='p-10  bg-nav-color flex flex-col gap-5'>
 

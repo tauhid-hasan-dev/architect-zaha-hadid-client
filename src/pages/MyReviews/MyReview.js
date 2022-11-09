@@ -13,10 +13,20 @@ const MyReview = () => {
             .then(data => setMyReviews(data))
     })
     return (
-        <div className='px-5 lg:px-28 bg-bg-login-color flex flex-col gap-10 p-10'>
+        <div >
             {
-                myreviews.map(myreview => <MyReviewCard key={myreview._id} myreview={myreview}></MyReviewCard>)
+                myreviews.length > 0 ?
+                    <div className='px-5 lg:px-28 bg-bg-login-color flex flex-col gap-10 p-10'>
+                        {
+                            myreviews.map(myreview => <MyReviewCard key={myreview._id} myreview={myreview}></MyReviewCard>)
+                        }
+                    </div>
+
+                    : <div className='flex justify-center p-56'>
+                        <p className='text-white text-5xl'>No reviews were added </p>
+                    </div>
             }
+
         </div>
     );
 };
