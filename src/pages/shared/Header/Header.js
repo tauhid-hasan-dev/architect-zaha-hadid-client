@@ -7,6 +7,7 @@ const Header = () => {
     const { user, logout } = useContext(AuthContext);
     const handleLogOut = () => {
         logout()
+        localStorage.clear()
             .then((result) => {
                 const user = result.user;
                 console.log(user)
