@@ -1,13 +1,18 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+    const googleProvider = new GoogleAuthProvider();
     useTitle('Register')
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -27,6 +32,34 @@ const Register = () => {
                 updateUserInfo(name, photoURL);
                 navigate('/')
                 console.log(user);
+            })
+            .catch(err => {
+                console.error(err);
+                toast.error(err)
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn(googleProvider)
+            .then(result => {
+                const user = result.user;
+                const currentUser = {
+                    email: user.email
+                }
+
+                fetch(`https://architect-tauhid-hasan-server.vercel.app/jwt`, {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('zaha-hadid-token', data.token);
+                        navigate(from, { replace: true });
+                    })
             })
             .catch(err => {
                 console.error(err);
@@ -105,7 +138,7 @@ const Register = () => {
                         Or login with with google
                     </div>
                     <div className='flex flex-row justify-center gap-3 mb-5 w-[100%]'>
-                        <button className="btn rounded-full  flex gap-2 "> <FaGoogle className='text-3xl'></FaGoogle> google </button>
+                        <button onClick={handleGoogleSignIn} className="btn rounded-full  flex gap-2 "> <FaGoogle className='text-3xl'></FaGoogle> google </button>
                     </div>
                 </div >
             </div>
