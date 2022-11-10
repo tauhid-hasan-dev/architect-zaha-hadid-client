@@ -33,7 +33,7 @@ const AddService = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    toast.success('Your review added');
+                    toast.success('You added a service successfully!');
                     form.reset()
                 }
             })
