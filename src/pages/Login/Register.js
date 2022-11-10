@@ -33,7 +33,7 @@ const Register = () => {
                 const user = result.user;
                 updateUserInfo(name, photoURL);
                 logout()
-                toast.success('Registration Successful')
+                toast.success('Registration Successful, Please Login Now')
                 navigate('/login')
                 console.log(user);
             })
