@@ -6,7 +6,6 @@ const About = () => {
             <div className="hero-content flex-col p-0 lg:flex-row">
                 <div className='w-full lg:w-1/2'>
                     <img src='https://i.ibb.co/P90mQSh/zh.jpg' className="w-[100%] lg:w-4/5 h-full  " alt='' />
-
                 </div>
                 <div className='w-full lg:w-1/2 p-5'>
                     <p className='font-bold text-lg lg:text-lg text-slate-50'>About Me</p>
@@ -15,8 +14,6 @@ const About = () => {
                     <p className="py-6 font-light">My pioneering vision redefined architecture for the 21st century and captured imaginations across the globe. Each of mine projects transformed notions of what can be achieved in concrete, steel, and glass; combining her unwavering optimism for the future and belief in the power of invention with advanced design, material and construction innovations. </p>
 
                     <p className="py-6 font-light">Many architects are called on to create new projects that stand as symbols of social progress—but none delivered as regularly, as unexpectedly and as spectacularly as me. My successes is so consistent, I received the highest honours from civic, academic and professional institutions across the globe.  </p>
-
-
                 </div>
             </div>
         </div>
