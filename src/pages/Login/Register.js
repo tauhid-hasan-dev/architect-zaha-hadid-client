@@ -7,7 +7,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
-    const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
+    const { createUser, updateUser, googleSignIn, logout } = useContext(AuthContext);
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     let location = useLocation();
@@ -31,15 +31,16 @@ const Register = () => {
             .then(result => {
                 setLoading(false)
                 const user = result.user;
-                toast.success('Registration successful!');
                 updateUserInfo(name, photoURL);
-                navigate('/')
+                logout()
+                toast.success('Registration Successful')
+                navigate('/login')
                 console.log(user);
             })
             .catch(err => {
                 setLoading(false);
                 console.error(err);
-                toast.error(err)
+                toast.error('Error occured')
             })
     }
 
@@ -73,7 +74,7 @@ const Register = () => {
             })
             .catch(err => {
                 console.error(err);
-                toast.error(err)
+                toast.error('Error occured')
             })
     }
 

@@ -89,7 +89,7 @@ const Login = () => {
             })
             .catch(err => {
                 console.error(err);
-                toast.error(err)
+                toast.error('Error occured')
             })
     }
 
