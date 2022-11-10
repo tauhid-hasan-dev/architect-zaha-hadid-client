@@ -54,8 +54,7 @@ const Login = () => {
             })
             .catch(err => {
                 setLoading(false);
-                console.error(err);
-                toast.error(err)
+                toast.error("Firebase error")
             })
 
     }
