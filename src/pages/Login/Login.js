@@ -1,5 +1,5 @@
 import { GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -8,6 +8,8 @@ import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
+    //const { loading } = useContext(AuthContext);
+    const [loading, setLoading] = useState(false);
     let location = useLocation();
     const navigate = useNavigate();
     useTitle('Login')
@@ -25,6 +27,7 @@ const Login = () => {
         //console.log(email, password)
         signIn(email, password)
             .then(result => {
+                setLoading(true)
                 const user = result.user;
                 console.log(user);
 
@@ -41,18 +44,24 @@ const Login = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
+                        setLoading(false);
                         console.log(data);
                         localStorage.setItem('zaha-hadid-token', data.token);
                         navigate(from, { replace: true });
                     })
 
-
+                
             })
             .catch(err => {
+                setLoading(false);
                 console.error(err);
                 toast.error(err)
             })
 
+    }
+
+    if (loading) {
+        return <p>loading.....</p>
     }
 
     const handleGoogleSignIn = () => {

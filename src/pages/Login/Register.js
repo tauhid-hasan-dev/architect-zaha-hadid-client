@@ -1,5 +1,5 @@
 import { GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -9,6 +9,7 @@ import useTitle from '../../hooks/useTitle';
 const Register = () => {
     const { createUser, updateUser, googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
@@ -16,6 +17,7 @@ const Register = () => {
     useTitle('Register')
     const handleSignUp = (event) => {
         event.preventDefault();
+        setLoading(true)
 
         const form = event.target;
         const name = form.name.value;
@@ -27,6 +29,7 @@ const Register = () => {
         console.log(email, password)
         createUser(email, password)
             .then(result => {
+                setLoading(false)
                 const user = result.user;
                 toast.success('Registration successful!');
                 updateUserInfo(name, photoURL);
@@ -34,9 +37,14 @@ const Register = () => {
                 console.log(user);
             })
             .catch(err => {
+                setLoading(false);
                 console.error(err);
                 toast.error(err)
             })
+    }
+
+    if (loading) {
+        return <p>loading.....</p>
     }
 
     const handleGoogleSignIn = () => {

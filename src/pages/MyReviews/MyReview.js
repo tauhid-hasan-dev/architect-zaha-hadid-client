@@ -29,10 +29,10 @@ const MyReview = () => {
     return (
         <div className='bg-bg-login-color'>
             {
-                myreviews.length > 0 ?
+                myreviews?.length > 0 ?
                     <div className='px-5 lg:px-28 bg-bg-login-color flex flex-col gap-10 pt-20 pb-64'>
                         {
-                            myreviews.map(myreview => <MyReviewCard key={myreview._id} myreview={myreview}></MyReviewCard>)
+                            myreviews?.map(myreview => <MyReviewCard key={myreview._id} myreview={myreview}></MyReviewCard>)
                         }
                     </div>
 

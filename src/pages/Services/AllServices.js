@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../contexts/AuthProvider';
 import ServiceCard from '../shared/ServiceCard/ServiceCard';
 
 
 const AllServices = () => {
     const [services, setServices] = useState([]);
+    //const { loading } = useContext(AuthContext);
+    const [loading, setLoading] = useState(true)
     console.log(services);
+
 
     useEffect(() => {
         fetch('https://architect-tauhid-hasan-server.vercel.app/allservices', {
@@ -12,9 +16,14 @@ const AllServices = () => {
         })
             .then(res => res.json())
             .then(data => {
+                setLoading(false);
                 setServices(data)
             })
     }, [])
+
+    if (loading) {
+        return <p>loading.....</p>
+    }
 
     return (
         <div className='bg-nav-color px-5 lg:px-28 py-8 lg:py-16'>
@@ -23,7 +32,7 @@ const AllServices = () => {
             </div>
             <div className=' grid grid-cols-1  lg:grid-cols-3 gap-10 '>
                 {
-                    services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
+                    services?.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
 
             </div>
