@@ -8,7 +8,10 @@ const MyReviewCard = ({ myreview }) => {
 
     const handleDelete = (id) => {
         fetch(`https://architect-tauhid-hasan-server.vercel.app/reviews/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('zaha-hadid-token')}`
+            }
         })
             .then(res => res.json())
             .then(data => {

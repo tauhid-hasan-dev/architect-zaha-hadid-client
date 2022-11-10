@@ -14,6 +14,8 @@ const EditReview = () => {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('zaha-hadid-token')}`
+
             },
             body: JSON.stringify(review),
         })
