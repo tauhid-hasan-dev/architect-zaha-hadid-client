@@ -51,7 +51,7 @@ const AddService = () => {
                     <input name='servicePrice' type='text' className="bg-slate-500 text-white  focus:bg-slate-700 input rounded-none w-full" placeholder="Service Price" required></input>
                     <input name='serviceImage' type='text' className="bg-slate-500 text-white  focus:bg-slate-700 input rounded-none w-full" placeholder="Image Url for service" required></input>
                     <textarea name='serviceDetails' type='text' className="bg-slate-500 text-white  focus:bg-slate-700 textarea rounded-none w-full" placeholder="Service Details" required></textarea>
-                    <button type='submit' className=" border border-slate-500 w-full py-3 px-10 text-white hidden lg:block hover:bg-slate-800">Add Service</button>
+                    <button type='submit' className=" border border-slate-500 w-full py-3 px-10 text-white  hover:bg-slate-800">Add Service</button>
                 </form>
             </div>
         </div>

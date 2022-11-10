@@ -20,7 +20,7 @@ const ServiceCard = ({ service }) => {
 
             <div className="py-5 px-5">
                 <Link to={`/servicedetails/${_id}`}>
-                    <button className=" border border-slate-500 w-full py-1 px-10 text-white hidden lg:block hover:bg-slate-600">View Details</button>
+                    <button className=" border border-slate-500 w-full py-2 px-10 text-white   hover:bg-slate-600">View Details</button>
                 </Link>
 
             </div>

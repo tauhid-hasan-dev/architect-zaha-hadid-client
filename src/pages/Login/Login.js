@@ -101,9 +101,7 @@ const Login = () => {
                             </label>
                             <input type="password" name='password' placeholder="password" className="input input-bordered rounded-none text-slate-900 font-semibold" required />
                         </div>
-                        <div className='text-red-600 bg-red-100 mb-3 mt-2 '>
-                            {/* {error} */}
-                        </div>
+
                         <div className='flex justify-between mt-3'>
                             <div>
 
@@ -117,7 +115,7 @@ const Login = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="border p-3 text-white hidden lg:block hover:bg-slate-600 ">Login</button>
+                            <button className="border p-3 text-white  hover:bg-slate-600 ">Login</button>
                         </div>
 
                         <div className='text-center'>

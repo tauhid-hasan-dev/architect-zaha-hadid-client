@@ -112,9 +112,7 @@ const Register = () => {
                             <input type="password" name='password' placeholder="Password" className="input input-bordered text-slate-900 font-semibold " required />
 
                         </div>
-                        <div className='text-red-600 bg-red-100 mb-3 mt-2 '>
-                            {/* {error} */}
-                        </div>
+
                         <div >
                             <input type="checkbox" id="terms" name="terms" value="terms" />
                             <label htmlFor="terms"> {<>
@@ -122,7 +120,7 @@ const Register = () => {
                             </>}</label>
                         </div>
                         <div className="form-control mt-6">
-                            <button type='submit' className="border p-3 text-white hidden lg:block hover:bg-slate-600  ">Register</button>
+                            <button type='submit' className="border p-3 text-white  hover:bg-slate-600  ">Register</button>
                         </div>
                         <div className="text-center">
                             <small className="mr-2">Already have an account?</small>
