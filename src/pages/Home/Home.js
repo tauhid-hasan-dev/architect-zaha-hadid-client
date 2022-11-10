@@ -2,8 +2,9 @@ import React from 'react';
 import useTitle from '../../hooks/useTitle';
 import About from './About';
 import Banner from './Banner/Banner';
-import Client from './Client';
-import Projects from './Projects';
+import ChooseMe from './ChooseMe';
+
+
 import ServiceHome from './ServiceHome';
 
 const Home = () => {
@@ -13,8 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <ServiceHome></ServiceHome>
             <About></About>
-            <Projects></Projects>
-            <Client></Client>
+            <ChooseMe></ChooseMe>
         </div>
     );
 };
