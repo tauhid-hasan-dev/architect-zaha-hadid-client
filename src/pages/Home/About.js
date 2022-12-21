@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className="hero py-10 lg:py-20 bg-bg-login-color text-slate-200">
+        <div className="hero py-10 lg:py-20 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-slate-200">
             <div className="hero-content flex-col p-0 lg:flex-row">
                 <div className='w-full lg:w-1/2'>
                     <img src='https://i.ibb.co/P90mQSh/zh.jpg' className="w-[100%] lg:w-4/5 h-full  " alt='' />

@@ -4,7 +4,7 @@ import useTitle from '../../hooks/useTitle';
 const Blog = () => {
     useTitle('Blog')
     return (
-        <div className='bg-bg-login-color px-5 lg:px-28 py-20'>
+        <div className='bg-gradient-to-r from-gray-700 via-gray-900 to-black px-5 lg:px-28 py-20'>
 
             <div className='border border-slate-500 p-2 mb-10 '>
                 <div className='flex justify-between   '>

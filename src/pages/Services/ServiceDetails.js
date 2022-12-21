@@ -50,7 +50,7 @@ const ServiceDetails = () => {
 
     console.log(service);
     return (
-        <div className="items-stretch cursor-pointer card rounded-none card-compact bg-bg-login-color  border-green-500  shadow-green-500 pb-16 px-5 pt-5 lg:px-28 lg:pt-20">
+        <div className="items-stretch cursor-pointer card rounded-none card-compact bg-gradient-to-r from-gray-700 via-gray-900 to-black  border-green-500  shadow-green-500 pb-16 px-5 pt-5 lg:px-28 lg:pt-20">
             <figure><img src={img} alt="Shoes" /></figure>
 
             <div className="card-body items-center text-center ">

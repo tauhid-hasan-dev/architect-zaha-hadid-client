@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChooseMe = () => {
     return (
-        <div className="hero py-10 lg:py-20 bg-gray-900 text-slate-200">
+        <div className="hero py-10 lg:py-20 bg-gradient-to-l from-gray-700 to-gray-900 bg-gradient-to-r text-slate-200">
             <div className="hero-content flex-col p-0 lg:flex-row justify-between">
 
                 <div className='w-full lg:w-1/2 p-5'>

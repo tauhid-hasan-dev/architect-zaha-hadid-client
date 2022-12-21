@@ -26,7 +26,7 @@ const AllServices = () => {
     }
 
     return (
-        <div className='bg-nav-color px-5 lg:px-28 py-8 lg:py-16'>
+        <div className='bg-gradient-to-r from-gray-700 via-gray-900 to-black px-5 lg:px-28 py-8 lg:py-16'>
             <div className='flex justify-center pb-20'>
                 <p className='text-4xl text-white'>My Services</p>
             </div>
