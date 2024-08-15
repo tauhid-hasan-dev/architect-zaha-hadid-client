@@ -8,7 +8,6 @@ import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
-  //const { loading } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   let location = useLocation();
   const navigate = useNavigate();
@@ -24,12 +23,10 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    //console.log(email, password)
     signIn(email, password)
       .then((result) => {
         setLoading(true);
         const user = result.user;
-        console.log(user);
 
         const currentUser = {
           email: user.email,
@@ -45,7 +42,6 @@ const Login = () => {
           .then((res) => res.json())
           .then((data) => {
             setLoading(false);
-            console.log(data);
             localStorage.setItem("zaha-hadid-token", data.token);
             navigate(from, { replace: true });
           });
@@ -93,93 +89,100 @@ const Login = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             localStorage.setItem("zaha-hadid-token", data.token);
             navigate(from, { replace: true });
           });
       })
       .catch((err) => {
-        console.error(err);
-        toast.error("Error occured");
+        toast.error("Error occurred");
       });
   };
 
   return (
     <div className="hero bg-bg-login-color">
-      <div className="hero-content flex-col  lg:flex-row">
-        <div className="px-5 lg:px-20  py-10  flex flex-col items-center text-slate-300">
-          <form
-            onSubmit={handleSignIn}
-            className="p-7 lg:p-10 border  border-slate-600 w-[350px]   lg:w-[450px] "
-          >
-            <p className="text-center text-slate-300 text-2xl  font-semibold">
-              Login{" "}
-            </p>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-slate-300">Email</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="email"
-                className="input input-bordered text-slate-200 font-semibold rounded-none"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text text-slate-300">Password</span>
-              </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="password"
-                className="input input-bordered rounded-none text-slate-900 font-semibold"
-                required
-              />
-            </div>
-
-            <div className="flex justify-between mt-3">
-              <div>
-                <label htmlFor="terms"> {<>Forgot Password?</>}</label>
-              </div>
-              <div>
-                <label
-                  htmlFor="my-modal-3"
-                  className="cursor-pointer underline text-slate-300 "
-                >
-                  Reset Password
-                </label>
-              </div>
-            </div>
-            <div className="form-control mt-6">
-              <button className="border p-3 text-white  hover:bg-slate-600 ">
+      <div className="hero-content flex-col lg:flex-row ">
+        <div className="px-5 lg:px-20 py-10 flex flex-col items-center text-slate-300">
+          <div>
+            <form
+              onSubmit={handleSignIn}
+              className="p-7 lg:p-10 border border-slate-600 w-[350px] lg:w-[450px]"
+            >
+              <p className="text-center text-slate-300 text-2xl font-semibold">
                 Login
+              </p>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-slate-300">Email</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="email"
+                  className="input input-bordered text-slate-200 font-semibold rounded-none"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-slate-300">Password</span>
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  className="input input-bordered rounded-none text-slate-900 font-semibold"
+                  required
+                />
+              </div>
+
+              <div className="flex justify-between mt-3">
+                <div>
+                  <label htmlFor="terms">Forgot Password?</label>
+                </div>
+                <div>
+                  <label
+                    htmlFor="my-modal-3"
+                    className="cursor-pointer underline text-slate-300"
+                  >
+                    Reset Password
+                  </label>
+                </div>
+              </div>
+              <div className="form-control mt-6">
+                <button className="border p-3 text-white hover:bg-slate-600">
+                  Login
+                </button>
+              </div>
+
+              <div className="text-center">
+                <small className="mr-2">New to My Website?</small>
+                <Link
+                  to="/register"
+                  className="label-text-alt link link-hover text-white"
+                >
+                  Register Now
+                </Link>
+              </div>
+            </form>
+
+            <div className="mb-3 mt-3">Or login with google</div>
+            <div
+              onClick={handleGoogleSignIn}
+              className="flex flex-row justify-center gap-3 mb-5 w-[100%]"
+            >
+              <button className="btn rounded-full flex gap-2">
+                <FaGoogle className="text-3xl"></FaGoogle> google
               </button>
             </div>
-
-            <div className="text-center">
-              <small className="mr-2">New to My Website?</small>
-              <Link
-                to="/register"
-                className="label-text-alt link link-hover  text-white"
-              >
-                Register Now
-              </Link>
-            </div>
-          </form>
-          <div className="mb-3 mt-3">Or login with google</div>
-          <div
-            onClick={handleGoogleSignIn}
-            className="flex flex-row justify-center gap-3 mb-5 w-[100%]"
-          >
-            <button className="btn  rounded-full  flex gap-2 ">
-              {" "}
-              <FaGoogle className="text-3xl"></FaGoogle> google{" "}
-            </button>
           </div>
         </div>
+        {/* Credentials Section */}
+        <div className="mt-6  p-4 bg-slate-700 text-slate-300 rounded">
+          <h2 className="text-center font-bold mb-4">Test Credential</h2>
+          <p className="mb-2">Email: admin@zaha.com</p>
+          <p className="mb-4">Password: 123456</p>
+        </div>
+        {/* End of Credentials Section */}
       </div>
     </div>
   );
